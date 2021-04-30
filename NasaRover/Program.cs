@@ -11,21 +11,18 @@ using System.Threading.Tasks;
 
 namespace NasaRover
 {
-	class Program
+	public class Program
 	{
-		static async Task Main(string[] args)
+		public static async Task Main(string[] args)
 		{
-			var services = new ServiceCollection();
-
-			services.AddMediatR(Assembly.GetExecutingAssembly())
-					.AddSingleton<IMapGrid, MapGrid>()
-					.AddSingleton<IMovementFactory, MovementFactory>()
-					.AddSingleton<IRoversManager, RoversManager>()
-					.AddSingleton<IApp, App>();
-
-			var provider = services.BuildServiceProvider();
-			var app = provider.GetRequiredService<IApp>();
-			await app.RunAsync();
+			await new ServiceCollection().AddMediatR(Assembly.GetExecutingAssembly())
+										 .AddSingleton<IMapGrid, MapGrid>()
+										 .AddSingleton<IMovementFactory, MovementFactory>()
+										 .AddSingleton<IRoversManager, RoversManager>()
+										 .AddSingleton<IApp, App>()
+										 .BuildServiceProvider()
+										 .GetRequiredService<IApp>()
+										 .RunAsync();
 		}
 	}
 	
