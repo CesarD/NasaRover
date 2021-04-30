@@ -62,5 +62,13 @@ namespace NasaRover.Tests
 		{
 			command.GetCommandInstance().Should().BeNull();
 		}
+
+		[Fact]
+		public void GetScentedInputReturnsGetScentedPositionsCommandTest()
+		{
+			var cmd = "GS".GetCommandInstance();
+
+			cmd.Should().BeOfType<GetScentedPositionsCommand>();
+		}
 	}
 }

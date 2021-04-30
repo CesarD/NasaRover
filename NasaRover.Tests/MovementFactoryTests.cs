@@ -11,6 +11,7 @@ namespace NasaRover.Tests
 		[InlineData('F', typeof(ForwardMovement))]
 		[InlineData('R', typeof(RotateRightMovement))]
 		[InlineData('L', typeof(RotateLeftMovement))]
+		[InlineData('K', typeof(KnightMovement))]
 		public void GetValidMovementsTest(char instruction, Type movementType)
 		{
 			var factory = new MovementFactory();

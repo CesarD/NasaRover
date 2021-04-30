@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using NasaRover.Common.Contracts;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,7 +9,8 @@ namespace NasaRover.Commands
 {
 	public class CommandHandlers : IRequestHandler<MapGridInitializerCommand>,
 								   IRequestHandler<NewRoverCommand>,
-								   IRequestHandler<RoverInstructionsCommand>
+								   IRequestHandler<RoverInstructionsCommand>,
+								   IRequestHandler<GetScentedPositionsCommand>
 	{
 		private readonly IMapGrid _mapGrid;
 		private readonly IRoversManager _roversManager;
@@ -49,6 +51,17 @@ namespace NasaRover.Commands
 
 				_roversManager.DisposeRover();
 			}
+
+			return Task.FromResult(Unit.Value);
+		}
+
+		public Task<Unit> Handle(GetScentedPositionsCommand request, CancellationToken cancellationToken)
+		{
+			foreach (var (x, y) in _mapGrid.ScentedPositions)
+				Console.WriteLine($"{x} {y}");
+
+			if (!_mapGrid.ScentedPositions.Any())
+				Console.WriteLine("No scented positions marked");
 
 			return Task.FromResult(Unit.Value);
 		}

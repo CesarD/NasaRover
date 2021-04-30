@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace NasaRover.Commands
 {
-	[CommandRegex("^[FRL]+$")]
+	[CommandRegex("^[FKRL]+$")]
 	public class RoverInstructionsCommand : CommandBase
 	{
 		public RoverInstructionsCommand(string command) : base(command)

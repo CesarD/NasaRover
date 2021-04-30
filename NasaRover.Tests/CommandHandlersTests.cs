@@ -115,5 +115,37 @@ namespace NasaRover.Tests
 			roverMock.Object.Lost.Should().BeTrue();
 			consoleOutput.ToString().Should().Be("1 1 N LOST\r\n");
 		}
+		
+		[Fact]
+		public async Task GetScentedPositionsCommandWithoutScentedPositionsInformsTheresNoneTest()
+		{
+			var mapGridMock = new Mock<IMapGrid>();
+			mapGridMock.Setup(x => x.ScentedPositions).Returns(new List<(int x, int y)>());
+			var roversMgrMock = new Mock<IRoversManager>();
+			var cmdMock = new Mock<GetScentedPositionsCommand>();
+			var handler = new CommandHandlers(mapGridMock.Object, roversMgrMock.Object);
+			var consoleOutput = new StringWriter();
+			Console.SetOut(consoleOutput);
+
+			await handler.Handle(cmdMock.Object, new CancellationToken());
+
+			consoleOutput.ToString().Should().Be("No scented positions marked\r\n");
+		}
+
+		[Fact]
+		public async Task GetScentedPositionsCommandWithScentedPositionsInformsTheListTest()
+		{
+			var mapGridMock = new Mock<IMapGrid>();
+			mapGridMock.Setup(x => x.ScentedPositions).Returns(new List<(int x, int y)> { (1, 1), (2, 2) });
+			var roversMgrMock = new Mock<IRoversManager>();
+			var cmdMock = new Mock<GetScentedPositionsCommand>();
+			var handler = new CommandHandlers(mapGridMock.Object, roversMgrMock.Object);
+			var consoleOutput = new StringWriter();
+			Console.SetOut(consoleOutput);
+
+			await handler.Handle(cmdMock.Object, new CancellationToken());
+
+			consoleOutput.ToString().Should().Be("1 1\r\n2 2\r\n");
+		}
 	}
 }

@@ -57,5 +57,22 @@ namespace NasaRover.Tests
 			y.Should().Be(expectedY);
 			orientation.Should().Be(expectedOrientation);
 		}
+
+		[Theory]
+		[InlineData(5, 5, OrientationEnum.N, 6, 7, OrientationEnum.N)]
+		[InlineData(5, 5, OrientationEnum.S, 4, 3, OrientationEnum.S)]
+		[InlineData(5, 5, OrientationEnum.W, 3, 6, OrientationEnum.W)]
+		[InlineData(5, 5, OrientationEnum.E, 7, 4, OrientationEnum.E)]
+		[InlineData(5, 5, (OrientationEnum)(-1), 5, 5, (OrientationEnum)(-1))]
+		public void KnightMovementTest(int startX, int startY, OrientationEnum startOrientation, int expectedX, int expectedY, OrientationEnum expectedOrientation)
+		{
+			var movement = new KnightMovement();
+
+			var (x, y, orientation) = movement.Move(startX, startY, startOrientation);
+
+			x.Should().Be(expectedX);
+			y.Should().Be(expectedY);
+			orientation.Should().Be(expectedOrientation);
+		}
 	}
 }
