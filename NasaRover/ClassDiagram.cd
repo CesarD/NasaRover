@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="NasaRover.Commands.CommandBase">
+    <Position X="4.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Commands\CommandBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Commands.CommandFactory">
+    <Position X="10.75" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Commands.CommandHandlers" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="10" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQA=</HashCode>
+      <FileName>Commands\CommandHandlers.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Commands.CommandRegexAttribute">
+    <Position X="8.25" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\CommandRegexAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Commands.MapGridInitializerCommand">
+    <Position X="7.25" Y="10" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MapGridInitializerCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Commands.NewRoverCommand">
+    <Position X="0.5" Y="10" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\NewRoverCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Commands.RoverInstructionsCommand">
+    <Position X="3.75" Y="10" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\RoverInstructionsCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Movements.ForwardMovement" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\ForwardMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Movements.MovementFactory" BaseTypeListCollapsed="true">
+    <Position X="17" Y="10" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Movements\MovementFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Movements.MovementInstructionAttribute">
+    <Position X="12" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\MovementInstructionAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NasaRover.Movements.RotateLeftMovement" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\RotateLeftMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Movements.RotateRightMovement" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\RotateRightMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Common.MapGrid" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAEAAQAAAAgAAEAAAAAAAIAAAAAAAAgCAAA=</HashCode>
+      <FileName>Common\MapGrid.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Common.Rover" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQQAAAAAAAAAAAAAACAAAAAAAAAAAAAAYAQ=</HashCode>
+      <FileName>Common\Rover.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Common.RoversManager" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="10" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAIQAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\RoversManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="NasaRover.Movements.Contracts.IMovement">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\Contracts\IMovement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NasaRover.Movements.Contracts.IMovementFactory">
+    <Position X="17" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Movements\Contracts\IMovementFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NasaRover.Common.Contracts.IMapGrid">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAQAAAAgAAEAAAAAAAIAAAAAAAAgCAAA=</HashCode>
+      <FileName>Common\Contracts\IMapGrid.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NasaRover.Common.Contracts.IRover">
+    <Position X="2.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAQ=</HashCode>
+      <FileName>Common\Contracts\IRover.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NasaRover.Common.Contracts.IRoversManager">
+    <Position X="13.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Contracts\IRoversManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NasaRover.Common.OrientationEnum">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhCIAAA=</HashCode>
+      <FileName>Common\OrientationEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Calibri" Size="10" />
+</ClassDiagram>
