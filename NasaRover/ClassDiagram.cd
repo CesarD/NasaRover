@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="NasaRover.Commands.CommandBase">
-    <Position X="4.5" Y="7.5" Width="1.75" />
+    <Position X="6.25" Y="7.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Commands\CommandBase.cs</FileName>
@@ -9,14 +9,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NasaRover.Commands.CommandFactory">
-    <Position X="10.75" Y="7.5" Width="2.75" />
+    <Position X="14.25" Y="7.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\CommandFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NasaRover.Commands.CommandHandlers" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="10" Width="2.75" />
+    <Position X="14.25" Y="10" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAQA=</HashCode>
       <FileName>Commands\CommandHandlers.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NasaRover.Commands.CommandRegexAttribute">
-    <Position X="8.25" Y="7.5" Width="2.25" />
+    <Position X="11.75" Y="7.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Commands\CommandRegexAttribute.cs</FileName>
@@ -60,7 +60,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NasaRover.Movements.MovementFactory" BaseTypeListCollapsed="true">
-    <Position X="17" Y="10" Width="3.5" />
+    <Position X="20.5" Y="10" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Movements\MovementFactory.cs</FileName>
@@ -68,7 +68,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NasaRover.Movements.MovementInstructionAttribute">
-    <Position X="12" Y="3.5" Width="2.5" />
+    <Position X="13.75" Y="3.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Movements\MovementInstructionAttribute.cs</FileName>
@@ -107,12 +107,27 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="NasaRover.Common.RoversManager" BaseTypeListCollapsed="true">
-    <Position X="13.75" Y="10" Width="3" />
+    <Position X="17.25" Y="10" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIQAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\RoversManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Movements.KnightMovement">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movements\KnightMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NasaRover.Commands.GetScentedPositionsCommand">
+    <Position X="10.75" Y="10" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\GetScentedPositionsCommand.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="NasaRover.Movements.Contracts.IMovement">
     <Position X="7.75" Y="0.5" Width="1.5" />
@@ -122,7 +137,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="NasaRover.Movements.Contracts.IMovementFactory">
-    <Position X="17" Y="7.5" Width="2.25" />
+    <Position X="20.5" Y="7.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Movements\Contracts\IMovementFactory.cs</FileName>
@@ -143,7 +158,7 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="NasaRover.Common.Contracts.IRoversManager">
-    <Position X="13.75" Y="7.5" Width="1.75" />
+    <Position X="17.25" Y="7.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Common\Contracts\IRoversManager.cs</FileName>
